@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeAvtivity">
+
+    <!--Main Tab Bar, ViewPager(Tab과 연결된 Viewpager)-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </ScrollView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:background="@drawable/border"
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        app:tabIndicatorHeight="0dp"
+        android:scaleType="fitCenter"
+        app:tabIconTint="@drawable/color_selector"
+        app:tabRippleColor="@android:color/transparent"
+        />
+
+</LinearLayout>
