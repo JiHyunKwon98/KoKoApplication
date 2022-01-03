@@ -9,11 +9,10 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 
-
-class HomeAvtivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home_avtivity)
+        setContentView(R.layout.activity_home_activity)
 
         val tab_layout : TabLayout = findViewById(R.id.tab_layout)
 
