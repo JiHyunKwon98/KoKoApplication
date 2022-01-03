@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".HomeAvtivity">
+    tools:context=".HomeActivity">
 
     <!--Main Tab Bar, ViewPager(Tab과 연결된 Viewpager)-->
     <ScrollView
