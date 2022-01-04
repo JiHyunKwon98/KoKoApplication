@@ -7,8 +7,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="mypage"
-        android:textSize="30dp"
-        />
+        android:padding="20dp"
+        android:text="My"
+        android:textColor="#464646"
+        android:textStyle="bold"
+        android:gravity="center|center_vertical"
+        android:background="@drawable/border_bottom"
+        android:textSize="40sp"/>
 
 </LinearLayout>
