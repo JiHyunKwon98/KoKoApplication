@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KoKoApplication">
         <activity
-            android:name=".HomeAvtivity"
+            android:name=".HomeActivity"
             android:exported="true" >
 
         </activity>
