@@ -15,6 +15,10 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <!-- Merterial Design 스타일 적용 -->
+    <style name="loginTheme" parent="Theme.MaterialComponents.DayNight"/>
+
+
     <style name="Theme.KoKoApplication.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
