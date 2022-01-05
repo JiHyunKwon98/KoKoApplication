@@ -1,11 +1,11 @@
 package com.example.kokoapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
+import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 
@@ -33,8 +33,10 @@ class HomeActivity : AppCompatActivity() {
         tab_layout.addTab(tab_layout.newTab().setCustomView(my))
 
         val view_pager : ViewPager = findViewById(R.id.view_pager)
-        val pagerAdapter = HomePagerAdapter(supportFragmentManager, 4)
-        view_pager.adapter = pagerAdapter
+        val adapter = HomePagerAdapter(LayoutInflater.from(this@HomeActivity))
+        view_pager.adapter = adapter
+        view_pager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tab_layout))
+
 
         tab_layout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
@@ -46,34 +48,57 @@ class HomeActivity : AppCompatActivity() {
             override fun onTabReselected(tab: TabLayout.Tab?) {
             }
         })
-        view_pager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tab_layout))
+
     }
 }
 
 class HomePagerAdapter(
-    fragmentManager: FragmentManager,
-    val tabCount: Int
-): FragmentPagerAdapter(fragmentManager){
-    override fun getCount(): Int {
-        return tabCount
-    }
-    override fun getItem(position: Int): Fragment {
-        when (position){
+    val layoutInflater: LayoutInflater
+
+): PagerAdapter(){
+
+    override fun instantiateItem(container: ViewGroup, position: Int): Any {
+        when(position){
             0->{
-                return GrapFragment()
+                val view = layoutInflater.inflate(R.layout.grap_fragment, container, false)
+                container.addView(view)
+                return view
             }
             1->{
-                return ManageFragment()
+                val view = layoutInflater.inflate(R.layout.manage_fragment, container, false)
+                container.addView(view)
+                return view
             }
             2->{
-                return HomeFragment()
+                val view = layoutInflater.inflate(R.layout.home_fragment, container, false)
+                container.addView(view)
+                return view
             }
             3->{
-                return MyFragment()
+                val view = layoutInflater.inflate(R.layout.my_fragment, container, false)
+                container.addView(view)
+                return view
             }
             else->{
-                return HomeFragment()
+                val view = layoutInflater.inflate(R.layout.home_fragment, container, false)
+                container.addView(view)
+                return view
             }
         }
     }
+
+    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
+        container.removeView(`object` as View)
+    }
+
+    override fun getCount(): Int {
+        return 4
+    }
+
+    override fun isViewFromObject(view: View, `object`: Any): Boolean {
+        return view === `object` as View
+
+    }
+
 }
+
