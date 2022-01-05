@@ -10,8 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KoKoApplication">
         <activity
+            android:name=".ManageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GraphActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
-            android:exported="true" >
+            android:exported="true">
 
         </activity>
         <activity

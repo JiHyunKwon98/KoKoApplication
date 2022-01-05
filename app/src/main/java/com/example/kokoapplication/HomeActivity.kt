@@ -60,27 +60,27 @@ class HomePagerAdapter(
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         when(position){
             0->{
-                val view = layoutInflater.inflate(R.layout.grap_fragment, container, false)
+                val view = layoutInflater.inflate(R.layout.activity_graph, container, false)
                 container.addView(view)
                 return view
             }
             1->{
-                val view = layoutInflater.inflate(R.layout.manage_fragment, container, false)
+                val view = layoutInflater.inflate(R.layout.activity_manage, container, false)
                 container.addView(view)
                 return view
             }
             2->{
-                val view = layoutInflater.inflate(R.layout.home_fragment, container, false)
+                val view = layoutInflater.inflate(R.layout.activity_calendar, container, false)
                 container.addView(view)
                 return view
             }
             3->{
-                val view = layoutInflater.inflate(R.layout.my_fragment, container, false)
+                val view = layoutInflater.inflate(R.layout.activity_my, container, false)
                 container.addView(view)
                 return view
             }
             else->{
-                val view = layoutInflater.inflate(R.layout.home_fragment, container, false)
+                val view = layoutInflater.inflate(R.layout.activity_calendar, container, false)
                 container.addView(view)
                 return view
             }
