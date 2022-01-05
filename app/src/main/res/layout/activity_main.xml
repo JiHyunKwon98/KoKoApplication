@@ -7,21 +7,18 @@
     android:background="#FF8A89"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
 
-        <TextView
-            android:layout_width="260dp"
-            android:layout_height="260dp"
-            android:background="@drawable/koko_logo"
-            android:gravity="center"
-            android:text="코 코"
-            android:textColor="#FF8A89"
-            android:textSize="93sp"
-            android:textStyle="bold" />
+    <TextView
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        android:background="@drawable/koko_logo"
+        android:gravity="center"
+        android:text="코 코"
+        android:textColor="#FF8A89"
+        android:textSize="93sp"
+        android:textStyle="bold" />
 
-    </LinearLayout>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
