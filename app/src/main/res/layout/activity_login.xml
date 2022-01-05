@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FF8A89"
     tools:context=".LoginActivity">
 
     <TextView
@@ -66,8 +67,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="로그인 상태 유지"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="332dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#FF8A89"
+        android:gravity="center"
+        android:text="로그인"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/checkBox"
+        app:layout_constraintTop_toBottomOf="@id/checkBox" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
