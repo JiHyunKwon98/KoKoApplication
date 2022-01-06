@@ -12,7 +12,7 @@
         android:padding="20dp"
         android:text="Goal"
         android:textColor="#464646"
-        android:textStyle="bold"
+        android:fontFamily="@font/font_style"
         android:gravity="center|center_vertical"
         android:background="@drawable/border_bottom"
         android:textSize="40sp"/>
