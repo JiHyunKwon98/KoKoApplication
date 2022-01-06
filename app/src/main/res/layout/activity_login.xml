@@ -115,7 +115,29 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/kakaoButton" />
 
+    <TextView
+        android:id="@+id/IdPwFind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="코코에 새롭게 가입하고 싶으신가요?"
+        android:textColor="#464646"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.3" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:text="회원가입"
+        android:textColor="#768FBE"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/IdPwFind"
+        app:layout_constraintTop_toTopOf="@+id/IdPwFind" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
