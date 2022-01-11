@@ -2,9 +2,9 @@ package com.example.kokoapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.DatePicker
 import android.widget.TextView
-import androidx.appcompat.widget.AppCompatTextView
-import com.andrewjapar.rangedatepicker.CalendarPicker
 
 import java.util.*
 
@@ -13,57 +13,25 @@ class CalendarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
 
-        val departure_date : TextView = findViewById(R.id.departure_date)
-        val return_date : TextView = findViewById(R.id.return_date)
-        val calendar_view : CalendarPicker = findViewById(R.id.calendarview)
+        val picker : DatePicker = findViewById(R.id.datePicker1)
+        val btnGet : Button = findViewById(R.id.button1)
+        val tvw : TextView = findViewById(R.id.textView1)
 
-        val startDate = Calendar.getInstance(TimeZone.getDefault(), Locale.getDefault())
-        val endDate = Calendar.getInstance(TimeZone.getDefault(), Locale.getDefault())
-        endDate.add(Calendar.MONTH, 6)
+        val minDate = Calendar.getInstance()
+        val maxDate = Calendar.getInstance()
 
-        calendar_view.apply {
-            setMode(CalendarPicker.SelectionMode.RANGE) // You can set it via XML
-            setRangeDate(startDate.time, endDate.time)
-            setSelectionDate(startDate.time, endDate.time)
+        minDate.set(2022,1-1,1);
+
+        picker.setMinDate(minDate.getTime().getTime());
+
+        maxDate.set(2023,1-1,1);
+        picker.setMaxDate(maxDate.getTimeInMillis());
+
+        btnGet.setOnClickListener {
+            tvw.setText("Selected Date: "+ picker.getDayOfMonth()+"/"+ (picker.getMonth() + 1)+"/"+picker.getYear())
         }
 
-        calendar_view.setOnRangeSelectedListener { startDate, endDate, startLabel, endLabel ->
-            departure_date.text = startLabel
-            return_date.text = endLabel
-        }
-
-        calendar_view.setOnStartSelectedListener { startDate, label ->
-            departure_date.text = label
-            return_date.text = "-"
-        }
-
-
-    /*
-        추후 변경 예정 !
-        val firstCalendarDate = Calendar.getInstance()
-        firstCalendarDate.set(2022, 1, 1)
-
-        val secondCalendarDate = Calendar.getInstance()
-        secondCalendarDate.time = firstCalendarDate.time
-        secondCalendarDate.add(Calendar.YEAR, 1)
-
-        val thirdCalendarDate = Calendar.getInstance()
-        thirdCalendarDate.time = firstCalendarDate.time
-        thirdCalendarDate.add(Calendar.MONTH, 2)
-
-        calendar_view.setOnRangeSelectedListener { startDate, endDate, startLabel, endLabel ->
-            departure_date.text = startLabel
-            return_date.text = endLabel
-        }
-
-        calendar_view.setOnStartSelectedListener { startDate, label ->
-            departure_date.text = label
-            return_date.text = "-"
-        }
-      calendar_view.apply {
-            setRangeDate(firstCalendarDate.time, secondCalendarDate.time)
-            setSelectionDate(firstCalendarDate.time, thirdCalendarDate.time)
-        }*/
+        println("Selected Date: "+ picker.getDayOfMonth()+"/"+ (picker.getMonth() + 1)+"/"+picker.getYear())
 
     }
 }

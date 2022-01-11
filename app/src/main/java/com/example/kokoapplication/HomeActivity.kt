@@ -70,7 +70,7 @@ class HomePagerAdapter(
                 return view
             }
             2->{
-                val view = layoutInflater.inflate(R.layout.activity_calendar, container, false)
+                val view = layoutInflater.inflate(R.layout.activity_date_picker, container, false)
                 container.addView(view)
                 return view
             }
@@ -80,7 +80,7 @@ class HomePagerAdapter(
                 return view
             }
             else->{
-                val view = layoutInflater.inflate(R.layout.activity_calendar, container, false)
+                val view = layoutInflater.inflate(R.layout.activity_date_picker, container, false)
                 container.addView(view)
                 return view
             }
