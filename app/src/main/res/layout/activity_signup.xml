@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".SignupActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:background="@drawable/top_tab"
-        android:text="회원가입"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
