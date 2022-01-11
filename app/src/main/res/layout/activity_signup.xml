@@ -18,6 +18,29 @@
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@null"        />
 
+    <TextView
+        android:id="@+id/signTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="회원가입"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/backImageView"
+        app:layout_constraintTop_toBottomOf="@id/backImageView" />
+
+    <TextView
+        android:id="@+id/signDetailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="가입을 위한 정보를 입력해주세요!"
+        android:textColor="#C8C8C8"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/signTextView"
+        app:layout_constraintTop_toBottomOf="@id/signTextView" />
 
 
 
