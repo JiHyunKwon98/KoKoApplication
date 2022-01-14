@@ -9,13 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KoKoApplication">
-
+        <activity
+            android:name=".WeekActivity"
+            android:exported="true"
+            android:theme="@style/CreateProfileTheme"/>
         <activity
             android:name=".SignupActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ManageActivity"
             android:exported="true" />
@@ -31,26 +34,17 @@
         <activity
             android:name=".DatePickerActivity"
             android:exported="true"
-            android:theme="@style/CreateProfileTheme"
-            >
-
+            android:theme="@style/CreateProfileTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-
-        <activity
-            android:name=".HomeActivity"
-            android:exported="true"
-            android:theme="@style/CreateProfileTheme">
         </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.KoKoApplication.NoActionBar"></activity>
+            android:theme="@style/Theme.KoKoApplication.NoActionBar" />
     </application>
 
 </manifest>
