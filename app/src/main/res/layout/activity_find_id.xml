@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindIdActivity">
+
+    <ImageView
+        android:id="@+id/back_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/arrow_back"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sign_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_image_view"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:text="아이디를 잊으셨나요?"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/back_image_view"
+        app:layout_constraintTop_toBottomOf="@id/back_image_view" />
+
+    <TextView
+        android:id="@+id/sign_detail_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sign_text_view"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="5dp"
+        android:text="가입할 때 사용한 전화번호를 입력하세요!"
+        android:textColor="#C8C8C8"
+        android:textSize="15sp" />
+
+
+
+</RelativeLayout>
