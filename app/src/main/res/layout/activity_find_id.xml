@@ -39,7 +39,7 @@
         android:layout_below="@id/find_id_text_view"
         android:layout_marginStart="22dp"
         android:layout_marginTop="5dp"
-        android:text="가입할 때 사용한 전화번호를 입력하세요!"
+        android:text="아이디를 찾기위한 본인인증이 필요합니다!"
         android:textColor="#C8C8C8"
         android:textSize="15sp" />
 
@@ -77,7 +77,7 @@
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:backgroundTint="#FF8A89"
-            android:text="비밀번호 찾기"
+            android:text="아이디 찾기"
             android:textStyle="bold"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"/>
