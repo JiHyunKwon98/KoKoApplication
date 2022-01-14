@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindPwActivity">
+
+    <ImageView
+        android:id="@+id/back_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/arrow_back"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/find_id_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_image_view"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:text="비밀번호를 잊으셨나요?"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/back_image_view"
+        app:layout_constraintTop_toBottomOf="@id/back_image_view" />
+
+    <TextView
+        android:id="@+id/find_detail_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/find_id_text_view"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="5dp"
+        android:text="가입할 때 사용한 전화번호를 입력하세요!"
+        android:textColor="#C8C8C8"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/find_phone_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/find_detail_text_view"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="50dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:hint="휴대폰 번호 ( - 제외 입력)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="350dp"
+                android:layout_height="50dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#FF8A89"
+            android:text="비밀번호 찾기"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
