@@ -12,7 +12,7 @@
         <item name="colorControlHighlight">@color/calendar_day_selected_bg</item>
 
         <!--Calender Background color -->
-        <item name="android:colorBackground">@color/calendar_bg</item>
+        <item name="android:windowBackground">@color/calendar_bg</item>
 
         <!-- Week TextColor-->
         <item name="android:textColorSecondary">@color/calendar_day_normal_font</item>

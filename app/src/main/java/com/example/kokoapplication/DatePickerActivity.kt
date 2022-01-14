@@ -7,6 +7,7 @@ import android.widget.DatePicker;
 import android.widget.ImageView
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
 import java.util.Calendar.*
 
 class DatePickerActivity : AppCompatActivity() {
@@ -15,8 +16,9 @@ class DatePickerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_date_picker)
 
         val picker : DatePicker = findViewById(R.id.datePicker1)
-        val btnGet : Button = findViewById(R.id.button1)
-        val tvw : TextView = findViewById(R.id.textView1)
+        val weekchage : ImageView = findViewById(R.id.weekchage)
+/*        val tvw : TextView = findViewById(R.id.textView1)
+        val btnGet : Button = findViewById(R.id.button1)*/
 
         val minDate = getInstance()
         val maxDate = getInstance()
@@ -28,8 +30,13 @@ class DatePickerActivity : AppCompatActivity() {
         maxDate.set(2024,1-1,1);
         picker.setMaxDate(maxDate.getTimeInMillis());
 
-        btnGet.setOnClickListener {
+/*        btnGet.setOnClickListener {
             tvw.setText("Selected Date: "+ picker.getDayOfMonth()+"/"+ (picker.getMonth() + 1)+"/"+picker.getYear());
+        }*/
+
+        weekchage.setOnClickListener{
+            val intent = Intent(this@DatePickerActivity, WeekActivity::class.java)
+            startActivity(intent)
         }
 
 
