@@ -10,12 +10,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom"
+        android:fontFamily="@font/font_style"
+        android:gravity="center|center_vertical"
         android:padding="20dp"
         android:text="Graph"
-        android:fontFamily="@font/font_style"
         android:textColor="#464646"
-        android:gravity="center|center_vertical"
-        android:background="@drawable/border_bottom"
         android:textSize="40sp"/>
 
 
