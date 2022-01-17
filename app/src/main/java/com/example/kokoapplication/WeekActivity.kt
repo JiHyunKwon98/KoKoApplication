@@ -98,6 +98,12 @@ class WeekActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val input : ImageView = findViewById(R.id.input)
+        input.setOnClickListener{
+            val intent = Intent(this@WeekActivity, InputGoal::class.java)
+            startActivity(intent)
+        }
+
         val gograp : ImageView = findViewById(R.id.gograp)
         val golist : ImageView = findViewById(R.id.golist)
         val gohome : ImageView = findViewById(R.id.gohome)
