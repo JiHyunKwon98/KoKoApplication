@@ -226,6 +226,15 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <EditText
+            android:id="@+id/birth"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:hint="생년월일" />
+
     </RelativeLayout>
 
     <!-- 휴대폰번호 입력 -->
@@ -266,6 +275,7 @@
                 android:layout_marginStart="50dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
     </RelativeLayout>
 
     <Button
