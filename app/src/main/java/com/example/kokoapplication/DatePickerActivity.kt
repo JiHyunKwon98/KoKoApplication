@@ -36,39 +36,22 @@ class DatePickerActivity : AppCompatActivity() {
             tvw.setText("Selected Date: "+ picker.getDayOfMonth()+"/"+ (picker.getMonth() + 1)+"/"+picker.getYear());
         }*/
 
+/*
         val chagemode: ImageView = findViewById(R.id.chagemode)
 
         chagemode.setOnClickListener {
             val intent = Intent(this@DatePickerActivity, WeekActivity::class.java)
             startActivity(intent)
         }
-
-        val gograp: ImageView = findViewById(R.id.gograp)
-
-        val golist: ImageView = findViewById(R.id.golist)
+*/
 
         val gohome: ImageView = findViewById(R.id.gohome)
 
-        val gomy: ImageView = findViewById(R.id.gomy)
-
-        gograp.setOnClickListener {
-            val intent = Intent(this@DatePickerActivity, GraphActivity::class.java)
-            startActivity(intent)
-        }
-
-        golist.setOnClickListener {
-            val intent = Intent(this@DatePickerActivity, ManageActivity::class.java)
-            startActivity(intent)
-        }
 
         gohome.setOnClickListener {
             val intent = Intent(this@DatePickerActivity, DatePickerActivity::class.java)
             startActivity(intent)
         }
 
-        gomy.setOnClickListener {
-            val intent = Intent(this@DatePickerActivity, MyActivity::class.java)
-            startActivity(intent)
-        }
     }
 }

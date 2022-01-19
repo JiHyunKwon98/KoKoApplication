@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".DatePickerActivity">
+    android:orientation="vertical">
 
     <DatePicker
         android:id="@+id/datePicker1"
@@ -16,10 +13,11 @@
         android:calendarViewShown="false"
         android:datePickerMode="calendar"
         android:scaleX="1.2"
-        android:scaleY="1.2" />
+        android:scaleY="1.2"
+        android:theme="@style/CreateProfileTheme" />
 
     <ImageView
-        android:id="@+id/chagemode"
+        android:id="@+id/changeweek"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_alignParentRight="true"
@@ -37,14 +35,6 @@
         android:layout_marginRight="30dp"
         android:scaleType="centerCrop"
         android:src="@drawable/calendar_icon" />
-
-    <!--    <RelativeLayout
-            android:id="@+id/getdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/datePicker1"
-            android:layout_marginTop="50dp"
-            android:orientation="horizontal">-->
 
     <LinearLayout
         android:id="@+id/dolist"
@@ -68,6 +58,7 @@
             android:layout_centerVertical="true"
             android:layout_marginTop="20dp"
             android:text="TO DO LIST"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <TextView
@@ -77,6 +68,7 @@
             android:layout_centerVertical="true"
             android:layout_marginTop="20dp"
             android:text="📕️  영어단어 외우기"
+            android:textColor="@color/black"
             android:textSize="17sp" />
 
 
@@ -86,12 +78,11 @@
             android:layout_centerVertical="true"
             android:layout_marginTop="20dp"
             android:text="🏃🏻‍️ 걷기운동 1시간"
+            android:textColor="@color/black"
             android:textSize="17sp" />
 
-    </LinearLayout>
 
-
-    <!--        <Button
+        <!--    <Button
                 android:id="@+id/button1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -106,54 +97,10 @@
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
                 android:layout_marginTop="20dp"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-        -->
+                android:textSize="17sp" />-->
 
-    <LinearLayout
-        android:id="@+id/tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:background="@drawable/border"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <ImageView
-            android:id="@+id/gograp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/grap_tab" />
-
-        <ImageView
-            android:id="@+id/golist"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/list_tab" />
-
-        <ImageView
-            android:id="@+id/gohome"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:color="@color/dark_gray"
-            android:src="@drawable/home_tab_selected" />
-
-        <ImageView
-            android:id="@+id/gomy"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/my_tab" />
 
     </LinearLayout>
 
