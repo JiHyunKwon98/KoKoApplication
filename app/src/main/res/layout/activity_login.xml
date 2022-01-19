@@ -84,10 +84,10 @@
     <!-- 로그인 버튼 -->
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="332dp"
-        android:layout_height="50dp"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/login_button"
+        android:backgroundTint="#FF8A89"
         android:gravity="center"
         android:text="로그인"
         android:textSize="18sp"
@@ -98,10 +98,10 @@
     <!-- 카톡 버튼 -->
     <Button
         android:id="@+id/kakaoButton"
-        android:layout_width="332dp"
-        android:layout_height="50dp"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/kakao_button"
+        android:backgroundTint="#F9E000"
         android:gravity="center"
         android:text="카카오톡으로 시작하기"
         android:textColor="@color/black"
