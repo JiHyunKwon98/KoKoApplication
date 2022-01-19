@@ -31,10 +31,6 @@
             android:name=".CalendarActivity"
             android:exported="true" />
         <activity
-            android:name=".WeekActivity"
-            android:exported="true"
-            android:theme="@style/CreateProfileTheme"/>
-        <activity
             android:name=".DatePickerActivity"
             android:exported="true"
             android:theme="@style/CreateProfileTheme">
