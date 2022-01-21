@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/find_id_text_view"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="아이디를 찾기위한 본인인증이 필요합니다!"
         android:textColor="#C8C8C8"
         android:textSize="15sp" />
