@@ -16,7 +16,7 @@
             android:name=".InputGoal"
             android:exported="true" />
         <activity
-            android:name=".FindPwActivity"
+            android:name=".FindPwActivity1"
             android:exported="false" />
         <activity
             android:name=".FindIdActivity1"
