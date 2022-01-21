@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FindIdActivity">
+    tools:context=".FindPwActivity2">
 
     <ImageView
         android:id="@+id/back_image_view"
@@ -20,64 +20,39 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/find_id_text_view"
+        android:id="@+id/find_pw_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/back_image_view"
         android:layout_marginStart="18dp"
         android:layout_marginTop="15dp"
-        android:text="아이디를 잊으셨나요?"
+        android:text="비밀번호를 잊으셨나요?"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/back_image_view"
         app:layout_constraintTop_toBottomOf="@id/back_image_view" />
 
     <TextView
-        android:id="@+id/find_detail_text_view"
+        android:id="@+id/find_pw_detail_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/find_id_text_view"
+        android:layout_below="@id/find_pw_text_view"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="5dp"
-        android:text="아이디를 찾기위한 본인인증이 필요합니다!"
+        android:layout_marginTop="10dp"
+        android:text="만약, 코드를 받지 못했다면\n '다시 보내기' 버튼을 한번 더 누르세요!"
         android:textColor="#C8C8C8"
         android:textSize="15sp" />
-
-    <RelativeLayout
-        android:id="@+id/find_name_relative"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/find_detail_text_view"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="50dp">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlined_name_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:hint="이름">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="350dp"
-                android:layout_height="50dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/find_phone_relative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/find_name_relative"
+        android:layout_below="@id/find_pw_detail_text"
         android:layout_centerVertical="true"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="50dp">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlined_phone_layout"
+            android:id="@+id/outlinedTextField"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
@@ -94,19 +69,39 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/resend_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/find_phone_relative"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="30dp">
+        android:layout_below="@+id/find_phone_relative"
+        android:gravity="right">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:text="다시 보내기"
+            android:textColor="#8C8C8C"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resend_text"
+        android:layout_marginTop="20dp"
+        android:layout_centerVertical="true">
 
         <Button
+            android:id="@+id/pw_button"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:backgroundTint="#FF8A89"
-            android:text="아이디 찾기"
+            android:text="비밀번호 찾기"
             android:textStyle="bold" />
 
     </RelativeLayout>
