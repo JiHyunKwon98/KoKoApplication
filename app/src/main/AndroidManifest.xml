@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KoKoApplication">
         <activity
+            android:name=".FindPwActivity3"
+            android:exported="false" />
+        <activity
             android:name=".FindPwActivity2"
             android:exported="false" />
         <activity
