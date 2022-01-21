@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KoKoApplication">
         <activity
+            android:name=".FindPwActivity2"
+            android:exported="false" />
+        <activity
             android:name=".FindIdActivity2"
             android:exported="false" />
         <activity
@@ -23,17 +26,17 @@
             android:exported="true" />
         <activity
             android:name=".SignupActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".CalendarActivity"
             android:exported="true" />
         <activity
             android:name=".DatePickerActivity"
             android:exported="true"
-            android:theme="@style/CreateProfileTheme"></activity>
+            android:theme="@style/CreateProfileTheme" />
         <activity
             android:name=".KoKoMain"
             android:exported="true">
