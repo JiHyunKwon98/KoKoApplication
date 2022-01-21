@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/find_id_text_view"
+        android:id="@+id/find_pw_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/back_image_view"
@@ -33,12 +33,12 @@
         app:layout_constraintTop_toBottomOf="@id/back_image_view" />
 
     <TextView
-        android:id="@+id/find_detail_text_view"
+        android:id="@+id/find_pw_detail_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/find_id_text_view"
+        android:layout_below="@id/find_pw_text_view"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="가입할 때 사용한 전화번호를 입력하세요!"
         android:textColor="#C8C8C8"
         android:textSize="15sp" />
@@ -47,7 +47,7 @@
         android:id="@+id/find_phone_relative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/find_detail_text_view"
+        android:layout_below="@id/find_pw_detail_text"
         android:layout_centerVertical="true"
         android:layout_marginTop="50dp">
 
@@ -74,6 +74,7 @@
         android:layout_centerVertical="true">
 
         <Button
+            android:id="@+id/pw_button"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:backgroundTint="#FF8A89"
