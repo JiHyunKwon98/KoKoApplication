@@ -47,7 +47,6 @@
         android:src="@drawable/input_goal" />
 
 
-
     <LinearLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
