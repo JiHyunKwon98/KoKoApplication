@@ -1,7 +1,8 @@
-package com.example.kokoapplication
+package com.example.kokoapplication.find_pw
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.kokoapplication.R
 
 class FindPwActivity4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

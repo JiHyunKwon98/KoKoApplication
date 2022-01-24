@@ -1,10 +1,11 @@
-package com.example.kokoapplication
+package com.example.kokoapplication.sign_up
 
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
 import android.widget.EditText
+import com.example.kokoapplication.R
 import java.util.*
 
 class SignupActivity : AppCompatActivity() {

@@ -1,11 +1,12 @@
-package com.example.kokoapplication
+package com.example.kokoapplication.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.kokoapplication.R
 
-class FindIdActivity2 : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_find_id2)
+        setContentView(R.layout.activity_login)
     }
 }

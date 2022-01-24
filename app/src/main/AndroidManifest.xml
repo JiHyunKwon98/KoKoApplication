@@ -10,31 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KoKoApplication" >
         <activity
-            android:name=".FindPwActivity3"
+            android:name=".find_pw.FindPwActivity3"
             android:exported="false" />
         <activity
-            android:name=".FindPwActivity4"
+            android:name=".find_pw.FindPwActivity4"
             android:exported="false" />
         <activity
-            android:name=".FindPwActivity2"
+            android:name=".find_pw.FindPwActivity2"
             android:exported="false" />
         <activity
-            android:name=".FindIdActivity2"
+            android:name=".find_id.FindIdActivity2"
             android:exported="false" />
         <activity
             android:name=".InputGoal"
             android:exported="true" />
         <activity
-            android:name=".FindPwActivity1"
+            android:name=".find_pw.FindPwActivity1"
             android:exported="false" />
         <activity
-            android:name=".FindIdActivity1"
+            android:name=".find_id.FindIdActivity1"
             android:exported="true" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".sign_up.SignupActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".login.LoginActivity"
             android:exported="true" />
         <activity
             android:name=".CalendarActivity"
@@ -53,7 +53,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".logo.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.KoKoApplication.NoActionBar" />

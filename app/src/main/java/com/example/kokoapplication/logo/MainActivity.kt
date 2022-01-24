@@ -1,7 +1,8 @@
-package com.example.kokoapplication
+package com.example.kokoapplication.logo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kokoapplication.R
 
 class MainActivity : AppCompatActivity() {
 
