@@ -22,15 +22,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/my">
 
+        <!-- profile 이미지 -->
         <ImageView
             android:id="@+id/profile_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
             android:layout_marginTop="30dp"
-            android:contentDescription="@null"
-            android:background="@drawable/profile" />
+            android:background="@drawable/profile"
+            android:contentDescription="@null" />
 
+        <!-- 사용자 이름 -->
         <TextView
             android:id="@+id/profile_name"
             android:layout_width="wrap_content"
@@ -42,6 +44,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <!-- 사용자 이메일 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,6 +56,17 @@
             android:textColor="#464646" />
 
     </RelativeLayout>
+
+    <!-- 구분선 -->
+    <View
+        android:id="@+id/my_line"
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_below="@id/my_profile"
+        android:layout_marginTop="13dp"
+        android:background="#E6E6E6" />
+
+
 
 
 </RelativeLayout>
