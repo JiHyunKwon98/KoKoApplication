@@ -3,6 +3,7 @@ package com.example.kokoapplication.home
 import android.content.Intent
 
 import android.os.Bundle
+import android.text.format.DateFormat.is24HourFormat
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.kokoapplication.InputGoal
 import com.example.kokoapplication.R
 import com.example.kokoapplication.databinding.FragmentWeekdayDoBinding
+import com.google.android.material.timepicker.MaterialTimePicker
+import com.google.android.material.timepicker.TimeFormat
 import org.threeten.bp.DayOfWeek
 import org.threeten.bp.LocalDateTime
 import org.threeten.bp.format.DateTimeFormatter
@@ -111,7 +114,42 @@ class DoItFragment : Fragment(R.layout.fragment_weekday_do) {
         val endDate = Calendar.getInstance()
         endDate.add(Calendar.MONTH, 1)
 
+        fragmentWeekdayDoBinding.timebutton.setOnClickListener{
+            openTimePicker()
+        }
 
+
+    }
+
+    private fun openTimePicker() {
+        val isSystem24Hour = is24HourFormat(requireContext())
+        val clockFormat = if(isSystem24Hour) TimeFormat.CLOCK_24H else TimeFormat.CLOCK_12H
+
+        val picker = MaterialTimePicker.Builder()
+            .setTimeFormat(clockFormat)
+            .setHour(12)
+            .setMinute(0)
+            .setTitleText("Set Alarm")
+            .build()
+
+        picker.show(childFragmentManager, "TAG")
+
+        picker.addOnPositiveButtonClickListener{
+            val h = picker.hour
+            val m = picker.minute
+        }
+
+        picker.addOnNegativeButtonClickListener {
+
+        }
+
+        picker.addOnCancelListener{
+
+        }
+
+        picker.addOnDismissListener {
+
+        }
     }
 
 }

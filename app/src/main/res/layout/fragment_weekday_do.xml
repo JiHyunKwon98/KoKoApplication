@@ -80,6 +80,23 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constraintLayout"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/timebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TimePicker">
+
+        </Button>
+
+
+    </LinearLayout>
+
 
 
 </RelativeLayout>
