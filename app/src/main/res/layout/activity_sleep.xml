@@ -20,4 +20,53 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <TextView
+        android:id="@+id/sleep_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_image_view"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:text="수면 시간을 설정해주세요"
+        android:textColor="#646464"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/sleep_detail_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sleep_text"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="10dp"
+        android:text="취침 시간과 기상시간에 해당하는 숫자를 차례로 클릭하세요!"
+        android:textColor="#C8C8C8" />
+
+    <TimePicker
+        android:id="@+id/sleep_timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sleep_detail_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sleep_timePicker"
+        android:gravity="end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:text="완료"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
 </RelativeLayout>
