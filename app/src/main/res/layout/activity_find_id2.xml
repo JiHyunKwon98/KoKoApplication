@@ -74,6 +74,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="50dp"
             android:backgroundTint="#FF8A89"
+            android:onClick="clickLogin"
             android:text="로그인하기"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -84,6 +85,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="40dp"
             android:backgroundTint="#FF8A89"
+            android:onClick="clickPw"
             android:text="비밀번호 찾기"
             android:textColor="@color/white"
             android:textStyle="bold" />
