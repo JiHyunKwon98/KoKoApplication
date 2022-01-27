@@ -4,19 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
 import android.widget.EditText
-import android.widget.ImageView
-import android.widget.DatePicker
-
 import android.app.DatePickerDialog
-import android.app.DatePickerDialog.OnDateSetListener
-
-import android.view.View
 import java.util.*
-import android.widget.TimePicker
-
 import android.app.TimePickerDialog
-import android.app.TimePickerDialog.OnTimeSetListener
-
 
 class InputGoal : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,9 +81,5 @@ class InputGoal : AppCompatActivity() {
             )
             picker.show()
         }
-
-
-
-
     }
 }
