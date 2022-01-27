@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/my"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border_bottom"
@@ -13,6 +14,45 @@
         android:padding="20dp"
         android:text="My"
         android:textColor="#464646"
-        android:textSize="40sp"/>
+        android:textSize="40sp" />
+
+    <RelativeLayout
+        android:id="@+id/my_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my">
+
+        <ImageView
+            android:id="@+id/profile_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@null"
+            android:background="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@id/profile_img"
+            android:text="김태형님"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_name"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@id/profile_img"
+            android:text="taehyung@naver.com"
+            android:textColor="#464646" />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
