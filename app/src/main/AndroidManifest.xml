@@ -10,16 +10,56 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KoKoApplication">
         <activity
-            android:name=".MainActivity"
+            android:name=".SleepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".find_pw.FindPwActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".find_pw.FindPwActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".find_pw.FindPwActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".find_id.FindIdActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".InputGoal"
+            android:exported="true" />
+        <activity
+            android:name=".find_pw.FindPwActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".find_id.FindIdActivity1"
+            android:exported="true" />
+        <activity
+            android:name=".sign_up.SignupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DatePickerActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.KoKoApplication.NoActionBar">
+            android:theme="@style/CreateProfileTheme" />
+        <activity
+            android:name=".KoKoMain"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".logo.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.KoKoApplication.NoActionBar" />
     </application>
 
 </manifest>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".find_id.FindIdActivity2">
+
+    <ImageView
+        android:id="@+id/back_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/arrow_back"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/find_id2_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_image_view"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:text="아이디를 잊으셨나요?"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/back_image_view"
+        app:layout_constraintTop_toBottomOf="@id/back_image_view" />
+
+    <TextView
+        android:id="@+id/find_id2_detail_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/find_id2_text_view"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="10dp"
+        android:text="고객님의 정보와 일치하는 아이디 목록입니다."
+        android:textColor="#C8C8C8"
+        android:textSize="15sp" />
+
+    <RadioGroup
+        android:id="@+id/id_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/find_id2_detail_text"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:text="taehyung@naver.com"
+            android:textSize="17sp" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_radio"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:backgroundTint="#FF8A89"
+            android:text="로그인하기"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:backgroundTint="#FF8A89"
+            android:text="비밀번호 찾기"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

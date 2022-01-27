@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CreateProfileTheme" parent="Theme.AppCompat.Light">
+
+        <!-- 상단 Title 배경색 -->
+        <item name="colorAccent">@color/calendar_day_selected_font</item>
+
+        <!-- 선택한 날짜 배경 색 -->
+        <item name="colorControlActivated">@color/calendar_day_selected_bg</item>
+
+        <!-- Highlight item color-->
+        <item name="colorControlHighlight">@color/calendar_day_selected_bg</item>
+
+        <!--Calender Background color -->
+        <item name="android:windowBackground">@color/calendar_bg</item>
+
+        <!-- Week TextColor-->
+        <item name="android:textColorSecondary">@color/calendar_day_normal_font</item>
+
+        <!-- Calender Number color arrow color (< >) -->
+        <item name="android:textColorPrimary">@color/calendar_day_normal_font</item>
+
+        <!--day , month TextColor-->
+        <item name="android:textColorPrimaryInverse">@color/calendar_month_font</item>
+
+        <!-- year-->
+        <item name="android:textColorSecondaryInverse">@color/calendar_month_font</item>
+
+        <!-- 취소/확인버튼 색상 -->
+        <item name="android:textColor">@color/calendar_day_normal_font</item>
+
+        <item name="android:textSize">20sp</item>
+
+        <item name="cornerSize">16dp</item>
+
+        <item name="windowActionBar">false</item>
+
+        <item name="windowNoTitle">true</item>
+
+        <item name="fontFamily">@font/font_style</item>
+
+    </style>
+
+</resources>

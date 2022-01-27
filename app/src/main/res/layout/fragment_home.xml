@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="calendar"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:theme="@style/CreateProfileTheme" />
+
+    <ImageView
+        android:id="@+id/changeweek"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/week_change" />
+
+    <ImageView
+        android:id="@+id/yearcalendar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/calendar_icon" />
+
+    <LinearLayout
+        android:id="@+id/dolist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datePicker1"
+        android:layout_marginHorizontal="32dp"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:background="#E4E4E4" />
+
+        <TextView
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:text="TO DO LIST"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:text="📕️  영어단어 외우기"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:text="🏃🏻‍️ 걷기운동 1시간"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+
+        <!--    <Button
+                android:id="@+id/button1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/calendar_day_button_bg"
+                android:text="Get"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:textSize="17sp" />-->
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

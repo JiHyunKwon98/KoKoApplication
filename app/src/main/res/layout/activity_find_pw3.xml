@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".find_pw.FindPwActivity3">
+
+    <ImageView
+        android:id="@+id/back_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/arrow_back"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/find_pw_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_image_view"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:text="비밀번호를 잊으셨나요?"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/back_image_view"
+        app:layout_constraintTop_toBottomOf="@id/back_image_view" />
+
+    <TextView
+        android:id="@+id/find_pw_detail_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/find_pw_text_view"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="10dp"
+        android:text="전송된 코드가 맞는지 한번 더 확인하세요!"
+        android:textColor="#C8C8C8"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/find_phone_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/find_pw_detail_text"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="50dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="350dp"
+                android:layout_height="50dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/resend_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/find_phone_relative"
+        android:gravity="right">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:text="다시 보내기"
+            android:textColor="#8C8C8C"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resend_text"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/pw_button"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:backgroundTint="#FF8A89"
+            android:text="비밀번호 찾기"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
