@@ -1,11 +1,14 @@
 package com.example.kokoapplication.sign_up
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
+import android.view.View
 import android.widget.EditText
 import com.example.kokoapplication.R
+import com.example.kokoapplication.login.LoginActivity
 import java.util.*
 
 class SignupActivity : AppCompatActivity() {
@@ -13,6 +16,7 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
+        //생년월일 입력
         val startdate : EditText = findViewById(R.id.birth)
 
         startdate.setInputType(InputType.TYPE_NULL);
@@ -34,5 +38,11 @@ class SignupActivity : AppCompatActivity() {
             )
             picker.show()
         }
+    }
+
+    //가입하기 버튼
+    fun clickSign(view: View) {
+        var intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
     }
 }

@@ -106,6 +106,7 @@
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:backgroundTint="#FF8A89"
+            android:onClick="clickId"
             android:text="아이디 찾기"
             android:textStyle="bold" />
 
