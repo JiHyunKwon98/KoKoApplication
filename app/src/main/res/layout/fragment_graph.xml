@@ -16,6 +16,7 @@
         android:textColor="#464646"
         android:textSize="40sp" />
 
+    <!-- 목표명 -->
     <TextView
         android:id="@+id/graph_text"
         android:layout_width="wrap_content"
@@ -28,6 +29,7 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <!-- 잘지킨날, 못지킨날 -->
     <RelativeLayout
         android:id="@+id/graph_good_bad"
         android:layout_width="match_parent"
@@ -62,6 +64,17 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/graph_good_day"
+            android:layout_marginStart="94dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="10일"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
         <ImageView
             android:id="@+id/graph_bad"
             android:layout_width="wrap_content"
@@ -81,6 +94,7 @@
             android:contentDescription="@null" />
 
         <TextView
+            android:id="@+id/graph_bad_day"
             android:layout_width="130dp"
             android:layout_height="40dp"
             android:layout_marginStart="38dp"
@@ -91,8 +105,21 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/graph_bad_day"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/graph_good"
+            android:gravity="center"
+            android:text="10일"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
     </RelativeLayout>
 
+    <!-- 잘하고있어요 메시지 -->
     <TextView
         android:id="@+id/graph_message"
         android:layout_width="wrap_content"
@@ -103,6 +130,9 @@
         android:text="잘 하고 있어요😍"
         android:textSize="19sp"
         android:textStyle="bold" />
+
+    <!-- seekbar -->
+
 
 
 </RelativeLayout>
