@@ -1,6 +1,7 @@
 package com.example.kokoapplication.home
 
 import android.content.Intent
+import android.os.Build
 
 import android.os.Bundle
 import android.text.format.DateFormat.is24HourFormat
@@ -25,6 +26,10 @@ import org.threeten.bp.format.DateTimeFormatter
 import org.threeten.bp.temporal.TemporalAdjusters
 import java.text.SimpleDateFormat
 import java.util.*
+import android.content.res.Resources
+
+import android.widget.TimePicker
+
 
 class DoItFragment : Fragment(R.layout.fragment_weekday_do) {
 
@@ -41,9 +46,11 @@ class DoItFragment : Fragment(R.layout.fragment_weekday_do) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // View binding
         val fragmentWeekdayDoBinding = FragmentWeekdayDoBinding.bind(view)
         binding = fragmentWeekdayDoBinding
 
+        // Fragment-> Fragment 화면 전환 function
         fragmentWeekdayDoBinding.changemonth.setOnClickListener {
             val transaction: FragmentTransaction =
                 requireActivity().supportFragmentManager.beginTransaction()
@@ -119,6 +126,23 @@ class DoItFragment : Fragment(R.layout.fragment_weekday_do) {
         }
 
 
+        var mCalendar = Calendar.getInstance()
+        val hour: Int
+        val min: Int
+        if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            hour =  fragmentWeekdayDoBinding.timePicker.getHour()
+            min =  fragmentWeekdayDoBinding.timePicker.getMinute()
+        } else {
+            hour =  fragmentWeekdayDoBinding.timePicker.hour
+            min =  fragmentWeekdayDoBinding.timePicker.minute
+        }
+
+        val isSystem24Hour = is24HourFormat(requireContext())
+        val clockFormat = if(isSystem24Hour) TimeFormat.CLOCK_24H else TimeFormat.CLOCK_12H
+
+
+        hideTimeHeaderLayout(fragmentWeekdayDoBinding.timePicker)
+
     }
 
     private fun openTimePicker() {
@@ -149,6 +173,14 @@ class DoItFragment : Fragment(R.layout.fragment_weekday_do) {
 
         picker.addOnDismissListener {
 
+        }
+    }
+
+    private fun hideTimeHeaderLayout(picker: TimePicker) {
+        val id = Resources.getSystem().getIdentifier("time_header", "id", "android")
+        val timeLayout = picker.findViewById<View>(id)
+        if (timeLayout != null) {
+            timeLayout.visibility = View.GONE
         }
     }
 
