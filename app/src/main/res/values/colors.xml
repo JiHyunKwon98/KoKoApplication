@@ -12,6 +12,7 @@
     <color name="gray">#888</color>
     <color name="blue">#0000ff</color>
     <color name="morelight_gray">#c8c8c8</color>
+    <color name="black_gray">#646464</color>
 
     <!--Background color-->
     <color name="calendar_picker_bg">#00FFFFFF</color>
@@ -31,7 +32,9 @@
 
     <color name="calendar_month_font">#000000</color>
     <color name="calendar_week_font">#333333</color>
-    
+
+    <color name="shrine_pink_100">#FDEDEA</color>
+    <color name="shrine_pink_900">#F7C0B4</color>
 
     
 

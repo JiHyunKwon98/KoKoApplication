@@ -21,6 +21,7 @@
 
 
     <ScrollView
+        android:id="@+id/form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/input">
@@ -69,14 +70,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
-                    android:text="공부"
-                    android:textSize="12dp" />
+                    android:buttonTint="@color/soft_pink"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:text="공부" />
 
                 <CheckBox
                     android:id="@+id/exercise_check"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
+                    android:buttonTint="@color/soft_pink"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
                     android:text="운동" />
 
                 <CheckBox
@@ -84,12 +90,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
-                    android:text="운동" />
+                    android:buttonTint="@color/soft_pink"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:text="취미" />
 
                 <CheckBox
                     android:id="@+id/etc_check"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/soft_pink"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
                     android:text="기타" />
             </LinearLayout>
 
@@ -144,42 +156,63 @@
                     android:id="@+id/mon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/soft_pink"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
                     android:text="월" />
 
                 <CheckBox
                     android:id="@+id/tue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/soft_pink"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
                     android:text="화" />
 
                 <CheckBox
                     android:id="@+id/wed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/soft_pink"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
                     android:text="수" />
 
                 <CheckBox
                     android:id="@+id/thu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/soft_pink"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
                     android:text="목" />
 
                 <CheckBox
                     android:id="@+id/fri"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/soft_pink"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
                     android:text="금" />
 
                 <CheckBox
                     android:id="@+id/sat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/soft_pink"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
                     android:text="토" />
 
                 <CheckBox
                     android:id="@+id/sun"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/soft_pink"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
                     android:text="일" />
 
             </LinearLayout>
@@ -276,6 +309,21 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/submit_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_style"
+        android:text="제출"
+        android:background="@android:color/transparent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/form"
+        android:textColor="@color/soft_pink"
+        android:layout_marginRight="10dp"
+        android:textSize="15sp" />
+
+
 
 
 </RelativeLayout>
