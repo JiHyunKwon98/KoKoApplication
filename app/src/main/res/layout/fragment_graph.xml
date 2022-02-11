@@ -132,7 +132,15 @@
         android:textStyle="bold" />
 
     <!-- seekbar -->
-
+    <SeekBar
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/graph_message"
+        android:layout_centerHorizontal="true"
+        android:max="100"
+        android:layout_marginTop="50dp"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:thumb="@drawable/seekbar_thumb" />
 
 
 </RelativeLayout>
