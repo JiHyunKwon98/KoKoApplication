@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/my"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border_bottom"
@@ -13,6 +14,139 @@
         android:padding="20dp"
         android:text="My"
         android:textColor="#464646"
-        android:textSize="40sp"/>
+        android:textSize="40sp" />
+
+    <RelativeLayout
+        android:id="@+id/my_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my">
+
+        <!-- profile 이미지 -->
+        <ImageView
+            android:id="@+id/profile_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/profile"
+            android:contentDescription="@null" />
+
+        <!-- 사용자 이름 -->
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@id/profile_img"
+            android:text="김태형님"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- 사용자 이메일 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_name"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@id/profile_img"
+            android:text="taehyung@naver.com"
+            android:textColor="#464646" />
+
+    </RelativeLayout>
+
+    <!-- 구분선 -->
+    <View
+        android:id="@+id/my_line"
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_below="@id/my_profile"
+        android:layout_marginTop="13dp"
+        android:background="#E6E6E6" />
+
+    <!-- 수면시간 재설정 -->
+    <RelativeLayout
+        android:id="@+id/my_resleep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_line"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/bed_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:background="@drawable/my_bed"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@id/bed_img"
+            android:text="수면시간 재설정"
+            android:textColor="#464646"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <!-- 알림 설정하기 -->
+    <RelativeLayout
+        android:id="@+id/my_alarm_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_resleep"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/alarm_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:background="@drawable/my_alarm"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@id/alarm_img"
+            android:text="알림 설정하기"
+            android:textColor="#464646"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_alarm_setting"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/replay_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:background="@drawable/my_replay"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@id/replay_img"
+            android:text="초기화"
+            android:textColor="#464646"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

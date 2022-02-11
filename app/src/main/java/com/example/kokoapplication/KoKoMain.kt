@@ -36,6 +36,7 @@ class KoKoMain: AppCompatActivity() {
 
     }
 
+    // Activity 내에서 Fragment 화면 전환 function
     private fun replaceFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction()
             .apply {

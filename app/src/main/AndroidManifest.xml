@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KoKoApplication">
         <activity
-            android:name=".SleepActivity"
+            android:name=".sleep.SleepActivity"
             android:exported="false" />
         <activity
             android:name=".find_pw.FindPwActivity3"

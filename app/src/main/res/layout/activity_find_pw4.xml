@@ -126,9 +126,8 @@
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
             android:backgroundTint="#FF8A89"
-            android:text="비밀번호 찾기"
+            android:text="비밀번호 바꾸기"
             android:textStyle="bold" />
 
     </RelativeLayout>

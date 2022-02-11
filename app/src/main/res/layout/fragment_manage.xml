@@ -15,7 +15,7 @@
         android:padding="20dp"
         android:text="Goal"
         android:textColor="#464646"
-        android:textSize="40sp"/>
+        android:textSize="40sp" />
 
     <LinearLayout
         android:layout_below="@+id/goal"
@@ -27,6 +27,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
             android:id="@+id/recyclerView"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 

@@ -283,6 +283,7 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="12dp"
         android:backgroundTint="#FF8A89"
+        android:onClick="clickSign"
         android:text="가입하기"
         android:textStyle="bold" />
 

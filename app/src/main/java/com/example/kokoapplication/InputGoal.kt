@@ -4,19 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
 import android.widget.EditText
-import android.widget.ImageView
-import android.widget.DatePicker
-
 import android.app.DatePickerDialog
-import android.app.DatePickerDialog.OnDateSetListener
-
-import android.view.View
 import java.util.*
-import android.widget.TimePicker
-
-import android.app.TimePickerDialog
-import android.app.TimePickerDialog.OnTimeSetListener
-
+import com.google.android.material.timepicker.MaterialTimePicker
+import com.google.android.material.timepicker.TimeFormat
 
 class InputGoal : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,32 +59,135 @@ class InputGoal : AppCompatActivity() {
 
         start_time.setInputType(InputType.TYPE_NULL);
         start_time.setOnClickListener{
-            val cldr = Calendar.getInstance()
-            val hour = cldr[Calendar.HOUR_OF_DAY]
-            val minutes = cldr[Calendar.MINUTE]
-            // time picker dialog
-            val picker: TimePickerDialog
-            picker = TimePickerDialog(this@InputGoal,
-                { tp, sHour, sMinute -> start_time.setText("$sHour:$sMinute") }, hour, minutes, true
-            )
-            picker.show()
+            openTimePickerStart()
         }
 
         finish_time.setInputType(InputType.TYPE_NULL);
         finish_time.setOnClickListener{
-            val cldr = Calendar.getInstance()
-            val hour = cldr[Calendar.HOUR_OF_DAY]
-            val minutes = cldr[Calendar.MINUTE]
-            // time picker dialog
-            val picker: TimePickerDialog
-            picker = TimePickerDialog(this@InputGoal,
-                { tp, sHour, sMinute -> finish_time.setText("$sHour:$sMinute") }, hour, minutes, true
-            )
-            picker.show()
+            openTimePickerFinish()
+        }
+    }
+
+    private fun openTimePickerStart() {
+
+        val picker : MaterialTimePicker = MaterialTimePicker.Builder()
+            .setTimeFormat(TimeFormat.CLOCK_12H)
+            .setHour(12)
+            .setMinute(0)
+            .setTitleText("Set Alarm")
+            .build()
+
+
+        picker.show(supportFragmentManager, "InputGoalActivity")
+
+        picker.addOnPositiveButtonClickListener{
+            val pickedHour = picker.hour
+            val pickedMinute = picker.minute
+            val formattedTime: String = when {
+                pickedHour > 12 -> {
+                    if (pickedMinute < 10) {
+                        "${picker.hour - 12}:0${picker.minute} pm"
+                    } else {
+                        "${picker.hour - 12}:${picker.minute} pm"
+                    }
+                }
+                pickedHour == 12 -> {
+                    if (pickedMinute < 10) {
+                        "${picker.hour}:0${picker.minute} pm"
+                    } else {
+                        "${picker.hour}:${picker.minute} pm"
+                    }
+                }
+                pickedHour == 0 -> {
+                    if (pickedMinute < 10) {
+                        "${picker.hour + 12}:0${picker.minute} am"
+                    } else {
+                        "${picker.hour + 12}:${picker.minute} am"
+                    }
+                }
+                else -> {
+                    if (pickedMinute < 10) {
+                        "${picker.hour}:0${picker.minute} am"
+                    } else {
+                        "${picker.hour}:${picker.minute} am"
+                    }
+                }
+            }
+            val start_time : EditText = findViewById(R.id.start_time)
+            start_time.setText(formattedTime)
         }
 
+        picker.addOnNegativeButtonClickListener {
 
+        }
 
+        picker.addOnCancelListener{
 
+        }
+
+        picker.addOnDismissListener {
+
+        }
+    }
+
+    private fun openTimePickerFinish() {
+
+        val picker : MaterialTimePicker = MaterialTimePicker.Builder()
+            .setTimeFormat(TimeFormat.CLOCK_12H)
+            .setHour(12)
+            .setMinute(0)
+            .setTitleText("Set Alarm")
+            .build()
+
+        picker.show(supportFragmentManager, "InputGoalActivity")
+
+        picker.addOnPositiveButtonClickListener{
+            val pickedHour = picker.hour
+            val pickedMinute = picker.minute
+            val formattedTime: String = when {
+                pickedHour > 12 -> {
+                    if (pickedMinute < 10) {
+                        "${picker.hour - 12}:0${picker.minute} pm"
+                    } else {
+                        "${picker.hour - 12}:${picker.minute} pm"
+                    }
+                }
+                pickedHour == 12 -> {
+                    if (pickedMinute < 10) {
+                        "${picker.hour}:0${picker.minute} pm"
+                    } else {
+                        "${picker.hour}:${picker.minute} pm"
+                    }
+                }
+                pickedHour == 0 -> {
+                    if (pickedMinute < 10) {
+                        "${picker.hour + 12}:0${picker.minute} am"
+                    } else {
+                        "${picker.hour + 12}:${picker.minute} am"
+                    }
+                }
+                else -> {
+                    if (pickedMinute < 10) {
+                        "${picker.hour}:0${picker.minute} am"
+                    } else {
+                        "${picker.hour}:${picker.minute} am"
+                    }
+                }
+            }
+            val finish_time : EditText = findViewById(R.id.finish_time)
+            finish_time.setText(formattedTime)
+        }
+
+        picker.addOnNegativeButtonClickListener {
+
+        }
+
+        picker.addOnCancelListener{
+
+        }
+
+        picker.addOnDismissListener {
+
+        }
     }
 }
