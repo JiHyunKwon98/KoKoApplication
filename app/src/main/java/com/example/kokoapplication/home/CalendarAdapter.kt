@@ -26,6 +26,8 @@ class CalendarAdapter(private val cList: List<CalendarVO>) :
             // 오늘 날짜와 캘린더의 오늘 날짜가 같을 경우 calendar_selected_color 적용하기
             if (today == now) {
                 binding.weekCardview.setBackgroundResource(R.drawable.calendar_selected_color)
+            }else {
+                binding.weekCardview.setBackgroundResource(R.drawable.calendar_unselected_color)
             }
 
         }
