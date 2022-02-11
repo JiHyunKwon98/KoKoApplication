@@ -28,10 +28,11 @@ class ManageFragment : Fragment(R.layout.fragment_manage) {
 
     private fun initData() {
         versionList.add(Versions(
-            "Android 10",
-            "Version 10",
-            "Api Level 29",
-            "This version list description"
+            "스쿼트 100회",
+            "학습",
+            "2021-11-01 - 2021-11-30",
+            "00:00 - 00:00",
+            "100회"
         ))
     }
 

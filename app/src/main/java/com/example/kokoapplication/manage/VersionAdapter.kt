@@ -17,6 +17,7 @@ class VersionAdapter(val versionList: List<Versions>) :
         var versionTxt : TextView = itemView.findViewById(R.id.version)
         var apiLevelTxt : TextView = itemView.findViewById(R.id.api_level)
         var descriptionTxt : TextView = itemView.findViewById(R.id.description)
+        var targetTxt : TextView = itemView.findViewById(R.id.target_content)
         var linearLayout : LinearLayout = itemView.findViewById(R.id.linearLayout)
         var expandableLayout : RelativeLayout = itemView.findViewById(R.id.expandable_layout)
 
@@ -35,6 +36,7 @@ class VersionAdapter(val versionList: List<Versions>) :
         holder.versionTxt.text = versions.version
         holder.apiLevelTxt.text = versions.apiLevel
         holder.descriptionTxt.text = versions.description
+        holder.targetTxt.text = versions.targetContent
 
         val isExpandable : Boolean = versionList[position].expandalbe
         holder.expandableLayout.visibility = if (isExpandable) View.VISIBLE else View.GONE

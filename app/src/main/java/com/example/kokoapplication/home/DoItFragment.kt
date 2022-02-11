@@ -18,18 +18,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.kokoapplication.InputGoal
 import com.example.kokoapplication.R
 import com.example.kokoapplication.databinding.FragmentWeekdayDoBinding
-import com.google.android.material.timepicker.MaterialTimePicker
-import com.google.android.material.timepicker.TimeFormat
 import org.threeten.bp.DayOfWeek
 import org.threeten.bp.LocalDateTime
 import org.threeten.bp.format.DateTimeFormatter
 import org.threeten.bp.temporal.TemporalAdjusters
 import java.text.SimpleDateFormat
 import java.util.*
-import android.content.res.Resources
-
-import android.widget.TimePicker
-
 
 class DoItFragment : Fragment(R.layout.fragment_weekday_do) {
 
@@ -38,10 +32,10 @@ class DoItFragment : Fragment(R.layout.fragment_weekday_do) {
     lateinit var calendarAdapter: CalendarAdapter
     private var calendarList = ArrayList<CalendarVO>()
 
-    private val sdf = SimpleDateFormat("MMMM yyyy", Locale.KOREA)
+/*    private val sdf = SimpleDateFormat("MMMM yyyy", Locale.KOREA)
     private val cal = Calendar.getInstance(Locale.KOREA)
     private val currentDate = Calendar.getInstance(Locale.KOREA)
-    private val dates = ArrayList<Date>()
+    private val dates = ArrayList<Date>()*/
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -90,7 +84,7 @@ class DoItFragment : Fragment(R.layout.fragment_weekday_do) {
             val dateFormat =
                 DateTimeFormatter.ofPattern("dd").withLocale(Locale.forLanguageTag("ko"))
             val monthFormat =
-                DateTimeFormatter.ofPattern("yyyy년 MM월").withLocale(Locale.forLanguageTag("ko"))
+                DateTimeFormatter.ofPattern("yyyy년 MM월 dd일").withLocale(Locale.forLanguageTag("ko"))
 
             val localDate = LocalDateTime.now().format(monthFormat)
             fragmentWeekdayDoBinding.textYearMonth.text = localDate
@@ -121,11 +115,11 @@ class DoItFragment : Fragment(R.layout.fragment_weekday_do) {
         val endDate = Calendar.getInstance()
         endDate.add(Calendar.MONTH, 1)
 
-        fragmentWeekdayDoBinding.timebutton.setOnClickListener{
+/*        fragmentWeekdayDoBinding.timebutton.setOnClickListener{
             openTimePicker()
-        }
+        }*/
 
-
+/*
         var mCalendar = Calendar.getInstance()
         val hour: Int
         val min: Int
@@ -143,9 +137,9 @@ class DoItFragment : Fragment(R.layout.fragment_weekday_do) {
 
         hideTimeHeaderLayout(fragmentWeekdayDoBinding.timePicker)
 
-    }
+    }*/
 
-    private fun openTimePicker() {
+/*    private fun openTimePicker() {
         val isSystem24Hour = is24HourFormat(requireContext())
         val clockFormat = if(isSystem24Hour) TimeFormat.CLOCK_24H else TimeFormat.CLOCK_12H
 
@@ -182,6 +176,6 @@ class DoItFragment : Fragment(R.layout.fragment_weekday_do) {
         if (timeLayout != null) {
             timeLayout.visibility = View.GONE
         }
+    }*/
     }
-
 }
